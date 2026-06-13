@@ -1,36 +1,29 @@
 name: Daily BMD Weather PDF Download
-
 on:
   schedule:
     - cron: '0 16 * * *'
   workflow_dispatch:
-
 jobs:
   download:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run scraper
         run: python scraper.py
-
       - name: Commit and push PDF + log
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash
           git add pdfs/ download_log.csv
           git diff --cached --quiet || git commit -m "Daily BMD report $(date +'%Y-%m-%d')"
-          git pull --rebase --autostash
           git push
