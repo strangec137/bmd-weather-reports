@@ -4,7 +4,7 @@ on:
   schedule:
     # Runs at 14:00 UTC = 8:00 PM Bangladesh time (BST = UTC+6)
     # BMD usually publishes the report by evening
-    - cron: '0 16 * * *'
+    - cron: '0 14 * * *'
 
   # Allow manual trigger from GitHub website anytime
   workflow_dispatch:
@@ -17,10 +17,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5.6.0
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -34,6 +34,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
           git add pdfs/ download_log.csv
           git diff --cached --quiet || git commit -m "Daily BMD report $(date +'%Y-%m-%d')"
           git push
