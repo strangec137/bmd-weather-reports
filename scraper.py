@@ -76,7 +76,15 @@ def main():
         log(date_str, "DOWNLOAD_ERROR", pdf_url, "")
         raise SystemExit(1)
 
-    # 4. Save — organised as  pdfs/YYYY/MM/YYYY-MM-DD.pdf
+    # 4. Validate it's actually a PDF (must start with %PDF)
+    if not pdf_resp.content.startswith(b'%PDF'):
+        print(f"ERROR: Downloaded file is not a valid PDF!")
+        print(f"  Content-Type: {pdf_resp.headers.get('Content-Type', 'unknown')}")
+        print(f"  First bytes: {pdf_resp.content[:50]}")
+        log(date_str, "INVALID_PDF", pdf_url, "")
+        raise SystemExit(1)
+
+    # 5. Save — organised as  pdfs/YYYY/MM/YYYY-MM-DD.pdf
     save_folder = os.path.join(SAVE_DIR, year_mon)
     os.makedirs(save_folder, exist_ok=True)
     filepath = os.path.join(save_folder, f"{date_str}.pdf")
