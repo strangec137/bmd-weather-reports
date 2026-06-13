@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Bangladesh Meteorological Department (BMD)</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="404 - Bangladesh Meteorological Department (BMD)">
+    <meta name="description" content="Official live portal of Bangladesh Meteorological Department (BMD). Get real-time weather updates, Dhaka & nationwide conditions, radar images, satellite pictures, forecasts, warnings, cyclone alerts, rainfall data, and NWP products for Bangladesh.">
+    <meta name="keywords" content="BMD, Bangladesh Meteorological Department, live weather Bangladesh, BMD radar, BMD satellite, Dhaka weather, Bangladesh forecast, cyclone warning, rainfall update, weather alert Bangladesh">
+    <!-- Optional: Robots & Viewport (good practice) -->
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="404 - Bangladesh Meteorological Department (BMD)">
+    <meta property="og:description" content="Official live portal of Bangladesh Meteorological Department (BMD). Get real-time weather updates, Dhaka & nationwide conditions, radar images, satellite pictures, forecasts, warnings, cyclone alerts, rainfall data, and NWP products for Bangladesh.">
+    <meta property="og:image" content="https://server8.bmd.gov.bd/filegif/img/nwp/sat_watervapor.gif?v=1781379080&last_image=image.jpg">
+    <meta property="og:image:secure_url" content="https://server8.bmd.gov.bd/filegif/img/nwp/sat_watervapor.gif?v=1781379080&last_image=image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="525">
+    <meta property="og:url" content="https://server8.bmd.gov.bd/2026/06/13/pdf/205390.pdf">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bangladesh Meteorological Department">
+
+	<link rel="icon" type="image/png"   href="https://server8.bmd.gov.bd/assets/images/logo.jpg">
+    <base href="https://server8.bmd.gov.bd/">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://server8.bmd.gov.bd/assets/vandors/bootstrap-5.3.8/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://server8.bmd.gov.bd/assets/vandors/fontawesome-free-6.7.2-web/css/all.min.css">
+    <!-- Google Fonts -->
+        <link href="https://server8.bmd.gov.bd/assets/css/bmd.web.css?v=1.09.09" rel="stylesheet">
+    <script>var TARGET_DOMAIN="server8.bmd.gov.bd";</script>    <script>var HOME_URL="https://server8.bmd.gov.bd/";</script>    <script>var LANG="EN";</script>    <script src="https://server8.bmd.gov.bd/assets/js/dictionary.js?v=1.09.09"></script>
+    <script src="https://server8.bmd.gov.bd/assets/js/jquery.min.js"></script>
+    <script src="https://server8.bmd.gov.bd/assets/js/jquery-ui.min.js"></script>
+<style>
+/* Show only on mobile devices */
+#mobilepopup {
+   position: fixed;bottom: 0;left: 0;right: 0;background: #000000a6;z-index: 99999;display: flex;justify-content: center;
+}
+
+/* Hide on tablets and desktops */
+@media screen and (min-width: 769px) {
+    #mobilepopup {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="mobilepopup" style="">
+        <p style="margin: 0;padding: 10px;">
+            <a class="btn btn-primary" href="https://mobile.bmd.gov.bd/" target="_blank">BMD Mobile Website</a>
+        </p>
+    </div>
+
+    <!-- Top Header -->
+
+    <div class="top-header d-block d-md-block d-sm-block">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+            <div class=" d-none  d-md-block" style="align-content: center;">
+                <i class="fas fa-clock me-2"></i> 
+                <span id="current-date-time"> -- </span>
+            </div>
+            <div>
+                <div class="top_menu_box  d-none  d-md-inline-flex">
+                    <a href="https://mobile.bmd.gov.bd/bmdmobile/aws/" class="text-white text-decoration-none me-3"><i class="fas fa-database"></i> AWS Data</a>
+                    <!-- <a href="http://hrms.bmd.gov.bd/" class="text-white text-decoration-none me-3"><i class="fas fa-user-tie"></i> HRMS</a> -->
+                    <a href="https://dataportal.bmd.gov.bd/" class="text-white  me-3 text-decoration-none"><i class="fas fa-shopping-cart"></i> Online Data Purchase</a>
+                    <!-- <a href="#" class="text-white text-decoration-none d-none language-button no-lang" id="language-button-en"> <i class="fas fa-language"></i> English</a>
+                    <a href="#" class="text-white text-decoration-none d-none language-button no-lang" id="language-button-bn"> <i class="fas fa-language"></i> বাংলা</a> -->
+                </div>
+                <div class="top_menu_box  no-lang">
+                    <!-- <a href="/link/aws" class="text-white text-decoration-none me-3"><i class="fas fa-database"></i> AWS Data</a> -->
+                    <!-- <a href="http://hrms.bmd.gov.bd/" class="text-white text-decoration-none me-3"><i class="fas fa-user-tie"></i> HRMS</a> -->
+                    <!-- <a href="https://dataportal.bmd.gov.bd/" class="text-white  me-3 text-decoration-none"><i class="fas fa-shopping-cart"></i> Online Data Purchase</a> -->
+                    <button class="text-white text-decoration-none d-none language-button" id="language-button-en"> <i class="fas fa-language"></i> English</button>
+                    <button  class="text-white text-decoration-none d-none language-button" id="language-button-bn"> <i class="fas fa-language"></i> বাংলা</button>
+                </div>
+                <div class="top_menu_box ms-3 ">
+                    <div class="input-group input-group-sm ms-auto  d-none  d-md-flex" style="max-width: 350px;">
+                        <input id="search_input" type="text" class="form-control" placeholder="Search..."  style="background: #fff;color: #000;width: auto;">
+                        <button id="search_input_btn"  class="btn btn-warning" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+    <!-- Main Header -->
+
+    <header class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="col-12" style="position: relative;">
+                        <div class="col-12 pe-3 ps-3">
+                            <div id="headbg"></div>
+                            <div id="logo-container" class="row align-items-center" style="z-index: 2;position: relative;min-height: 130px;">
+                                <div class="col-md-6">
+                                    <div class="d-lg-block d-none align-items-center">
+                                        <img src="https://server8.bmd.gov.bd/assets/images/bmdlogo.png">
+                                    </div>
+                                    <div class="d-flex d-lg-none align-items-center d-md-flex">
+                                        <img src="https://server8.bmd.gov.bd/assets/images/logo.jpg" alt="Logo" style="height: 60px;" class="me-3 bg-white p-1">
+                                        <div class="no-lang">
+                                                                                            <h2 class="h4 mb-0 fw-bold">Bangladesh Meteorological Department</h2>
+                                                <!-- <p class="small mb-0">বাংলাদেশ আবহাওয়া অধিদপ্তর</p> -->
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-md-end d-none">
+                                    <div class="input-group input-group-sm ms-auto" style="max-width: 250px;">
+                                        <input type="text" class="form-control" placeholder="Search...">
+                                        <button class="btn btn-warning" type="button"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/" >Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Notice</a>
+                        <ul class="dropdown-menu"  >
+                            <li><a class="dropdown-item"  href="/p/tender">Local Tender Notice</a></li>
+                            <li><a class="dropdown-item"  href="/p/International-Tender">International Tender</a></li>
+                            <li><a class="dropdown-item" href="/p/Result" >Result</a></li>
+                            <li><a class="dropdown-item" href="/p/Jobs" >Jobs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown d-none">
+                        <a href="#/" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Observation Network</a>
+                        <ul class="dropdown-menu"  >
+                            <li><a class="dropdown-item" href="/p/Observatories" >Observatories</a></li>
+                            <li><a class="dropdown-item" href="/external-link/https://bmdrainfallnetwork.com/realtimedatas/" >Real Time Rainfall Network</a></li>
+                            <li><a class="dropdown-item" href="/external-link/http://bmdmm.com/users/login/" >Marine Observation</a></li>
+                            <li><a class="dropdown-item" href="/external-link/https:/bmdcnetwork.com/" >Real Time Carbon Network</a></li>
+                            <li><a class="dropdown-item" href="/external-link/https:/bmdsmn.com/" >Real TimeSoil Moisture Network</a></li>
+                            <li><a class="dropdown-item" href="/external-link/https:/bmdrwq.com/" >Rain Water Quality Observation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#/" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Forecast</a>
+                        <ul class="dropdown-menu"  >
+                            <li><a class="dropdown-item" href="/p/Weather-Forecast" >Weather Forecast</a></li>
+                            <li><a class="dropdown-item" href="/p/WEATHER-FORECAST-FOR-DHAKA-AND-NHOOD" >Dhaka &amp; N.hood</a></li>
+                            <li><a class="dropdown-item" href="/p/Divisional-forecast" >Divisional forecast</a></li> 
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#/" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Warnings</a>
+                        <ul class="dropdown-menu"  >
+                            <li><a class="dropdown-item" href="/p/Marine-Warning" >Marine Warning</a></li>
+                            <li><a class="dropdown-item" href="/p/Inland-Riverport-Warning" >Inland Riverport Warning</a></li>
+                            <li><a class="dropdown-item" href="/p/Heavy-Rainfall-Warning" >Heavy Rainfall Warning</a></li>
+                            <!-- <li><a class="dropdown-item" href="/p/Lightning-Warning" >Lightning Warning</a></li> -->
+                            <li><a class="dropdown-item" href="/p/Kalbaishakhi-Warning" >Kalbaishakhi Warning</a></li>
+                            <li><a class="dropdown-item" href="/p/Heat-Wave-Warning" >Heat Wave Warning </a></li>
+                            <!-- <li><a class="dropdown-item" href="/p/Fog-Warning" >Fog Warning</a></li> -->
+                            <!-- <li><a class="dropdown-item" href="/p/Landslide-Warning" >Landslide Warning</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a  href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Climate Outlook</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/p/One-Month-Outlook-108" >One Month Outlook</a></li>
+                            <li><a class="dropdown-item" href="/p/Three-Month-Outlook" >Three Month Outlook</a></li>
+
+                            <li class="dropdown-submenu position-relative">
+                                <a class="dropdown-item" href="#">NextGEN</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/p/OneMonth282">One Month Forecast</a></li>
+                                    <li><a class="dropdown-item"href="/p/ThreeMonth283">Seasonal Forecast</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#/" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/p/BMD-Service-Users-List" >BMD Service Users List</a></li>
+                            <li><a class="dropdown-item" href="/p/Organogram-180" >Organogram</a></li>
+                            <li><a class="dropdown-item" href="/p/Contact-Us" >Address</a></li>
+                            <li><a class="dropdown-item" href="/p/Head-Quarter" >Head Quarter</a></li>
+                            <li><a class="dropdown-item" href="/p/List-of-Scientist" >List of Scientist</a></li>
+                            <li><a class="dropdown-item" href="/p/List-of-Engineers" >List of Engineers</a></li>
+                            <li><a class="dropdown-item" href="/p/Meteorologists-Seniority-List" >Seniority List Meteorological </a></li>
+                            <li><a class="dropdown-item" href="/p/Engineers-Seniority-List" >Seniority List Engineering </a></li>
+                            <li><a class="dropdown-item" href="/p/General-Seniority-List" >Seniority List General</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown d-none">
+                        <a href="#/" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Contact Us</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item dropdown">
+                                <a href="/p/Seniority-List" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Seniority List</a>
+                                <ul class="dropdown-menu">
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown d-none">
+                        <a href="#/" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">WB Project</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/external-link/http://www.worldbank.org/en/news/press-release/2016/06/02/world-bank-support-to-improve-weather-forecasting-college-education-in-bangladesh" >Announcement</a></li>
+                            <li><a class="dropdown-item" href="/p/Notice-n-Circular" >Notice And Circular</a></li>
+                            <li><a class="dropdown-item" href="/p/TenderWB" >Tender(WB)</a></li>
+                            <li><a class="dropdown-item" href="/p/WBEMFBangladesh" >WB EMF Bangla</a></li>
+                            <li><a class="dropdown-item" href="/p/Training-Modules-of-BMD" >Training</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#/" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Mobile</a>
+                        <ul class="dropdown-menu"  >
+                            <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=bd.gov.bmd.app.weatherapp&hl=en" >BMD Weather App</a></li>
+                            <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=bd.gov.bmd.app.bmdweatherapp&hl=en_US&gl=US" >BMD Current Weather</a></li>
+                            <li><a class="dropdown-item" href="https://mobile.bmd.gov.bd/" >Mobile Website</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#/" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Observation Network</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://bmdrainfallnetwork.com/realtimedatas/">Real Time Rainfall Network</a></li>
+                            <li><a class="dropdown-item" href="https://bmd.gov.bd/link/bmdmm">Marine Observation</a></li>
+                            <li><a class="dropdown-item" href="https://bmd.gov.bd/external-link/https://bmdcnetwork.com/">Real Time Carbon Network</a></li>
+                            <li><a class="dropdown-item" href="https://bmd.gov.bd/external-link/https://bmdsmn.com/">Real TimeSoil Moisture Network</a></li>
+                            <li><a class="dropdown-item" href="https://bmd.gov.bd/external-link/https://bmdrwq.com/">Rain Water Quality Observation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#https:/drive.google.com/file/d/12b7p2GctW-ZYqnEhKyrVy0PIM4dpC2cC/view?usp=sharing" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">July Gallery</a>
+                        <ul class="dropdown-menu"  >
+                            <li><a class="dropdown-item" href="https:/youtu.be/LzAV_PNzO-M?feature=shared" >36 Hours of Betrayal </a></li>
+                            <li><a class="dropdown-item" href="https:/drive.google.com/file/d/12b7p2GctW-ZYqnEhKyrVy0PIM4dpC2cC/view?usp=sharing" >July Videos </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link blink3" href="/survey" >Survey</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="scroll_bar_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="NewsScroll">
+                        <div class="marquee-div">
+                            <div class="marquee-content" id="NewsScroll-content">...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="the_page_body_section" style="min-height:400px;"><!--the_page_body_section_start-->
+        
+<!-- Main Content -->
+<main class="container">
+    <!-- Body Section -->
+    <div class="row mb-5  mt-5">
+        <div class="col-12 mb-4 text-center mt-5">
+                            <h3 class="section-heading text-uppercase no-lang">404 Page not found</h3>
+                <p>There is no entry found.</p>
+                        <!-- <p> 2026  </p> -->
+
+        </div>
+    </div>
+
+
+</main>
+<style>
+.section-heading::after { 
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    margin: 0 auto;
+}
+</style>
+
+    <!--the_page_body_section_end--></section>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-1">
+                    <div class="footer-links">
+                        <h5>About BMD</h5>
+                        <!-- <p  class="no-lang">The Bangladesh Meteorological Department is the national meteorological service of Bangladesh, providing weather forecasts, warnings, and climate services.</p> -->
+                        <div class="mt-4">
+                            <a href="https://www.facebook.com/bmd.gov.bd" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-youtube fa-lg"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-1">
+                    <div class="footer-links">
+                        <h5>Services</h5>
+                        <ul>
+                            <li><a href="/forecast">Forecast</a></li>
+                            <li><a href="/warning">Warnings</a></li>
+                            <!-- <li><a href="/p/Jobs">Jobs</a></li> -->
+                            <!-- <li><a href="/p/BMD-Mobile-Apps">Mobile App</a></li> -->
+                            <li><a href="https://dataportal.bmd.gov.bd/">Online Data Purchase</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-1">
+                    <div class="footer-links">
+                        <h5>Resources</h5>
+                        <ul>
+                            <!-- <li><a href="/satelite">Satellite Images</a></li>
+                            <li><a href="/radar">Radar Images</a></li> -->
+                            <li><a href="/climate">Climate Data</a></li>
+                            <li><a href="/p/Publications">Publications</a></li> 
+                            <li><a href="https://journal.bmd.gov.bd/">Journals</a></li> 
+                            <li><a href="https://bmd.gov.bd/web/bangla_bmd.xml">Sitemap Bangla</a></li> 
+                            <li><a href="https://bmd.gov.bd/web/english_bmd.xml">Sitemap English</a></li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-1">
+                    <div class="footer-links">
+                        <h5>Contact Info</h5>
+                        <p>
+                            <i class="fas fa-map-marker-alt me-2"></i> Agargoan, Dhaka-1207<br>
+                            <i class="fas fa-phone me-2"></i> +8802-41025705<br>
+                            <span class="no-lang"><i class="fas fa-envelope me-2"></i> info@bmd.gov.bd</span><br>
+                            <i class="fas fa-clock me-2"></i> Sun-Thu: 9:00 AM - 5:00 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> 
+                        © Copy Rights 2014 - 2026 Bangladesh Meteorological Department. All rights reserved. | Powered by <a href="https://www.websoftbd.net/" class="no-lang" style="color:#E2E2E2;">Web Soft BD</a>
+                        <span style="float:right;"><a href="http://webmail.bmd.gov.bd/" style="color:#E2E2E2;">Web-Mail</a></span>  
+                    </div>
+                    <div class="col-md-6 d-none text-end">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" style="display: none;opacity: 0.5;">
+        <div class="text-center">
+            <!-- <div class="spinner-border text-primary" role="status"></div> -->
+            <img src="https://server8.bmd.gov.bd/assets/images/load.gif">
+            <!-- <div class="mt-2">Loading...</div> -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://server8.bmd.gov.bd/assets/vandors/bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- APP JS -->
+    <script src="https://server8.bmd.gov.bd/assets/js/bmd.web.js?v=1.09.09"></script>
+    <script src="https://presite.bmd.gov.bd/tracking/tracking.new.js?v=3.5"></script>
+     
+
+
+    <script>
+        setTimeout(() => {
+            location.reload();
+        }, 600000); // 10 minutes
+    </script>
+    
+</body>
+</html>
