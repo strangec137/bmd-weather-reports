@@ -34,7 +34,9 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
           git add pdfs/ download_log.csv
+          git stash
+          git pull --rebase
+          git stash pop
           git diff --cached --quiet || git commit -m "Daily BMD report $(date +'%Y-%m-%d')"
           git push
