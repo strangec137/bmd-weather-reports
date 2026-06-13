@@ -26,7 +26,7 @@ def find_pdf_url(html: str) -> str | None:
     for tag in soup.find_all("a", href=pattern):
         return BASE_URL + tag["href"]
     # fallback: regex on raw HTML
-    m = re.search(r'/file/(\d{4}/\d{2}/\d{2}/pdf/\d+\.pdf)', html)
+    m = re.search(r'(/file/\d{4}/\d{2}/\d{2}/pdf/\d+\.pdf)', html)
     if m:
         return BASE_URL + m.group(1)
     return None
