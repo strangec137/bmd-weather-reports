@@ -4,7 +4,7 @@ on:
   schedule:
     # Runs at 14:00 UTC = 8:00 PM Bangladesh time (BST = UTC+6)
     # BMD usually publishes the report by evening
-    - cron: '0 14 * * *'
+    - cron: '0 16 * * *'
 
   # Allow manual trigger from GitHub website anytime
   workflow_dispatch:
